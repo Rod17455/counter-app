@@ -81,6 +81,9 @@ class _CounterViewState extends State<CounterView> {
               onPressed: () => context.read<CounterCubit>().decrement(),
               child: const Icon(Icons.remove),
             ),
+            const SizedBox(height: 10),
+            ElevatedButton(onPressed: () => context.read<CounterCubit>().reset(), 
+            child: const Icon(Icons.restore))
           ],
         ),
       ),

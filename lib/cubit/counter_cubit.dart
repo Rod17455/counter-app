@@ -29,4 +29,8 @@ class CounterCubit extends Cubit<int> {
         );
     }
   }
+
+  void reset(){
+    emit(0);
+  }
 }
