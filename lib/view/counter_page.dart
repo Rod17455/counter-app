@@ -68,22 +68,12 @@ class _CounterViewState extends State<CounterView> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            ElevatedButton(
-              onPressed: () => context.read<CounterCubit>().increment(),
-              child: const Icon(Icons.add),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
+            FlutterLogo(
+                size: 100,
+              ),
+              SizedBox(height: 16),
             const CounterText(),
-            const SizedBox(height: 10),
-            ElevatedButton(
-              onPressed: () => context.read<CounterCubit>().decrement(),
-              child: const Icon(Icons.remove),
-            ),
-            const SizedBox(height: 10),
-            ElevatedButton(onPressed: () => context.read<CounterCubit>().reset(), 
-            child: const Icon(Icons.restore))
+            
           ],
         ),
       ),
@@ -97,8 +87,8 @@ class CounterText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context);
-    final count = context.select((CounterCubit cubit) => cubit.state);
-    return Text('$count', style: theme.textTheme.displayMedium);
+    //final count = context.select((CounterCubit cubit) => cubit.state);
+    return Text('Hola mundo');
   }
 }
 
